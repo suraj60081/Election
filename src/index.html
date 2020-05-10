@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <style>
+table, th, td {
+  border: 1px solid black;
+};
+.footer1 {
+   position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;  
+}
+
+</style>
+ 
+   
+    <MARQUEE behaviour="scroll" direction="left" width=100% bgcolor="#00FF00"> <font size="+5">Election Results_2020</font></MARQUEE>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-color:white;">
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+
+    <div class="container" style="width: 650px;" margin-top:-95px;>
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">Voting Status</h1>
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: block;">
+            <table class="table" style="b"  >
+			
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Votes</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+           
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect"><font style="color:black;" >Select Candidate</font></label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" style="color:red;" style="background-color:green;"><font style="size:10" >Vote</font></button>
+            </form>
+            <p id="accountAddress" class="text-center" style="background-color:skyblue;"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+	<footer style="vertical-align: bottom;">
+	<MARQUEE  position="bottom" behaviour="scroll" onmouseover="stop()" onmouseout="start()" direction="right" width=100% bgcolor="#0000"><font id="copyright" size="+1" color="white" ><i> by:Suraj,Sparsh,Sachin(CCVT B-4)</i></font></p></MARQUEE>
+  </footer>
+    
+  </body>
+  
+</html>
